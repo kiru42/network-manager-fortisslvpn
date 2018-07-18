@@ -474,9 +474,6 @@ run_openfortivpn (NMFortisslvpnPlugin *plugin, NMSettingVpn *s_vpn, GError **err
 		g_ptr_array_add (argv, (gpointer) g_strdup (value));
 	}
 
-	g_ptr_array_add (argv, (gpointer) g_strdup ("--pppd-plugin"));
-	g_ptr_array_add (argv, (gpointer) g_strdup (NM_FORTISSLVPN_PPPD_PLUGIN));
-
 	g_ptr_array_add (argv, NULL);
 
 	_LOGD ("start %s", (str_tmp = g_strjoinv (" ", (char **) argv->pdata)));
